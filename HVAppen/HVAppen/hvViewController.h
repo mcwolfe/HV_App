@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface hvViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+- (IBAction)loginButton_tap:(id)sender;
+
 
 @end
