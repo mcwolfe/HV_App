@@ -13,7 +13,7 @@
 @end
 
 @implementation hvViewController
-@synthesize textFieldPassword, textFieldUserName;
+@synthesize textFieldPassword, textFieldUserName, hash;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,6 +26,28 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loginButton_tap:(id)sender {
-    [[NSMutableString alloc] init];
+    NSMutableString *hashString = [[NSMutableString alloc] init];
+    NSString *username = [textFieldUserName text];
+    NSString *password = [textFieldPassword text];
+    
+    [hashString appendString:username];
+    [hashString appendString:password];
+    
+    hash = [hvViewController generateHashWithString:hashString];
+    hashString = nil;
+    NSLog(@"%@", hash);
+    
+}
+
++ (NSString *)generateHashWithString:(NSString *)inString
+{
+    const char *input = [inString UTF8String];
+    char result[32];
+    
+    CC_SHA256(input, strlen(input), result);
+    
+    NSString *toReturn = [[NSString alloc] initWithCharacters:result length:32];
+    
+    return toReturn;
 }
 @end

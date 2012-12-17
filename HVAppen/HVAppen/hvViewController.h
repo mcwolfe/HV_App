@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CommonCrypto/CommonDigest.h>
 
 @interface hvViewController : UIViewController
 
@@ -15,5 +16,7 @@
 @property (nonatomic) NSString *hash;
 
 - (IBAction)loginButton_tap:(id)sender;
+
++ (NSString *)generateHashWithString:(NSString *)inString;
 
 @end
