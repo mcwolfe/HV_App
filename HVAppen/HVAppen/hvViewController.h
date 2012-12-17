@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldUserName;
-@property (nonatomic) NSString *hash;
+@property (nonatomic) NSString *hashFromNameAndPassword;
 
 - (IBAction)loginButton_tap:(id)sender;
 

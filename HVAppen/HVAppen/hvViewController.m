@@ -13,7 +13,7 @@
 @end
 
 @implementation hvViewController
-@synthesize textFieldPassword, textFieldUserName, hash;
+@synthesize textFieldPassword, textFieldUserName, hashFromNameAndPassword;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,20 +33,25 @@
     [hashString appendString:username];
     [hashString appendString:password];
     
-    hash = [hvViewController generateHashWithString:hashString];
-    hashString = nil;
-    NSLog(@"%@", hash);
+    hashFromNameAndPassword = [hvViewController generateHashWithString:hashString];
+    NSLog(@"%@",hashString);
+    
+    NSLog(@"%@", hashFromNameAndPassword);
     
 }
 
 + (NSString *)generateHashWithString:(NSString *)inString
 {
     const char *input = [inString UTF8String];
-    char result[32];
-    
+    unsigned char result[CC_SHA256_DIGEST_LENGTH];
     CC_SHA256(input, strlen(input), result);
-    
-    NSString *toReturn = [[NSString alloc] initWithCharacters:result length:32];
+
+    //Takes the unsigned char result and converts it into NSMutableString
+    NSMutableString *toReturn = [NSMutableString stringWithCapacity:CC_SHA256_DIGEST_LENGTH*2];
+    for(int i = 0;i<CC_SHA256_DIGEST_LENGTH;i++)
+    {
+        [toReturn appendFormat:@"%02x",result[i]];
+    }
     
     return toReturn;
 }
