@@ -13,7 +13,7 @@
 @end
 
 @implementation hvViewController
-
+@synthesize textFieldPassword, textFieldUserName;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -25,8 +25,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (IBAction)loginButton_tap:(id)sender {
-    
+    [[NSMutableString alloc] init];
 }
 @end

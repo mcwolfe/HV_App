@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface hvViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
-- (IBAction)loginButton_tap:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldUserName;
+@property (nonatomic) NSString *hash;
+
+- (IBAction)loginButton_tap:(id)sender;
 
 @end
