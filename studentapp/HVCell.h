@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HVCell : UITableViewCell
-@property (retain, nonatomic) IBOutlet UILabel *titleLabel;
-@property (retain, nonatomic) IBOutlet UILabel *tagLabel;
-@property (weak, nonatomic) IBOutlet UITextView *descriptionText;
-@property (retain, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (retain, nonatomic) UITextView *descriptionText;
+@property (retain, nonatomic) UILabel    *titleLabel;
+@property (retain, nonatomic) UILabel    *tagLabel;
+@property (retain, nonatomic) UILabel    *dateLabel;
+
 - (void)setSideColor:(UIColor *)color;
-- (void)modifyTextLabel;
 @end

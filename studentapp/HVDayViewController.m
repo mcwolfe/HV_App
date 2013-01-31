@@ -169,11 +169,9 @@
 
     [cell setSideColor:activity.color];
     
-    cell.textLabel.text = activity.activityShortDescription;
+    cell.descriptionText.text = activity.activityShortDescription;
     cell.tagLabel.text = activity.tag;
     cell.dateLabel.text = activity.publishedDateString;
-    cell.detailTextLabel.text = activity.activityShortDescription;
-    cell.textLabel.backgroundColor = [UIColor clearColor];
     cell.titleLabel.text = activity.title;
     return cell;
 }

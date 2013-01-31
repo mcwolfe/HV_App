@@ -224,13 +224,13 @@
 
 - (NSString *)publishedDateString {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"dd/MM - yyyy HH:mm:ss"
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+
+    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"dd/MM - HH:mm"
                                                              options:0
-                                                              locale:[NSLocale currentLocale]];
+                                                              locale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"]];
     [formatter setDateFormat:formatString];
     return [formatter stringFromDate:self.publishedDate];
-    
-    
 }
 
 - (NSString *)description {

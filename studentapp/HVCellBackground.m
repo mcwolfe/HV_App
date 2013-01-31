@@ -51,8 +51,6 @@
     } else {
         drawLinearGradient(context, paperRect, whiteColor, lightGrayColor);
     }
-
-    
     
     //Om man vill ha ett vitt sträck:
     /*CGRect strokeRect = paperRect;

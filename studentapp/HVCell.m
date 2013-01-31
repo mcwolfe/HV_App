@@ -11,6 +11,7 @@
 
 @implementation HVCell
 
+@synthesize descriptionText;
 @synthesize titleLabel;
 @synthesize tagLabel;
 @synthesize dateLabel;
@@ -23,13 +24,12 @@
         [self addTagLabelToSubview];
         [self addDateLabelToSubview];
         [self addTitleLabelToSubview];
-        [self modifyTextLabel];
+        [self addDescriptionTextToSubview];
         
         self.backgroundView = [[HVCellBackground alloc] initAsSelected:NO];
         self.selectedBackgroundView = [[HVCellBackground alloc] initAsSelected:YES];
         self.textLabel.highlightedTextColor = [UIColor grayColor];
     }
-    
     return self;
 }
 - (void)drawRect:(CGRect)rect {
@@ -42,42 +42,39 @@
     return rect;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        
-    }
-    return self;
-}
-
 - (void)addTagLabelToSubview {
-    
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:13];
     CGRect tagRect = self.contentView.bounds;
-    tagRect.origin.x = (tagRect.size.width / 4) * 3;
-    tagLabel = [[UILabel alloc] initWithFrame:CGRectMake(tagRect.origin.x, tagRect.origin.y, tagRect.size.width / 4, 25)];
+    tagRect.origin.x = 200;
+    tagRect.origin.y = 0;
+    tagRect.size.width = 100;
+    tagRect.size.height = 20;
+    
+    tagLabel = [[UILabel alloc] initWithFrame:tagRect];
     tagLabel.textAlignment = NSTextAlignmentLeft;
+    tagLabel.font = font;
+    tagLabel.textAlignment = NSTextAlignmentRight;
     tagLabel.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:tagLabel];
 }
 
 - (void)addTitleLabelToSubview {
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:13];
     CGRect tagRect = self.contentView.bounds;
-    tagRect.origin.x = 6;
+    tagRect.origin.x = 7;
     tagRect.origin.y = 0;
-    tagRect.size.width = 200;
+    tagRect.size.width = 194;
     tagRect.size.height = 20;
     
     titleLabel = [[UILabel alloc] initWithFrame:tagRect];
+    titleLabel.font = font;
     titleLabel.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:titleLabel];
 }
 
 - (void)addDateLabelToSubview {
-    UIFont *font = [[UIFont alloc] init];
-    font = [UIFont fontWithName:@"Helvetica"
-                           size:11];
-
     
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:11];
     dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 56, 98, 12)];
     
     dateLabel.font = font;
@@ -107,9 +104,14 @@
     [super setHighlighted:highlighted animated:animated];
 }
 
--(void)modifyTextLabel{
-    self.textLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
+- (void)addDescriptionTextToSubview {
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:11];
+    CGRect textRect = CGRectMake(0, 10, 210, 50);
     
+    descriptionText = [[UITextView alloc] initWithFrame:textRect];
+    descriptionText.backgroundColor = [UIColor clearColor];
+    descriptionText.font = font;
+    [self.contentView addSubview:descriptionText];
 }
 
 @end
