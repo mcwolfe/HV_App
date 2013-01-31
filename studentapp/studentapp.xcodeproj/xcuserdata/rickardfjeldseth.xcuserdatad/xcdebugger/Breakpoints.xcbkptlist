@@ -190,11 +190,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HVCell.m"
-         timestampString = "381258107.799679"
+         timestampString = "381331560.062686"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "92"
-         endingLineNumber = "92"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
          landmarkName = "-setSideColor:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -203,11 +203,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HVCell.m"
-         timestampString = "381258107.799679"
+         timestampString = "381331560.062686"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
          landmarkName = "-initWithCoder:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -346,11 +346,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "HVCell.m"
-         timestampString = "381258107.799679"
+         timestampString = "381331560.062686"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "102"
+         endingLineNumber = "102"
          landmarkName = "-setSelected:animated:"
          landmarkType = "5">
       </FileBreakpoint>

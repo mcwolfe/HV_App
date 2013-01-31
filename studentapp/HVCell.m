@@ -23,13 +23,11 @@
         [self addTagLabelToSubview];
         [self addDateLabelToSubview];
         [self addTitleLabelToSubview];
+        [self modifyTextLabel];
         
         self.backgroundView = [[HVCellBackground alloc] initAsSelected:NO];
         self.selectedBackgroundView = [[HVCellBackground alloc] initAsSelected:YES];
         self.textLabel.highlightedTextColor = [UIColor grayColor];
-        [self modifyTextLabel];
-    
-        //[self.contentView addSubview:self.tagLabel];
     }
     
     return self;
@@ -96,7 +94,8 @@
     bg.sideColor         = color;
     selectedBG.sideColor = color;
     
-    //[self.backgroundView setNeedsDisplay];
+    [self.backgroundView setNeedsDisplay];
+    [self.selectedBackgroundView setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
