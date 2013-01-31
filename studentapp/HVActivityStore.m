@@ -200,12 +200,15 @@
  * Return: HVActivity Array.
  ------------------------------------------------*/
 - (NSArray *)generateActivitiesFromXMLWithString:(NSString *)xmlString {
-    RXMLElement     *rootElement = [[RXMLElement alloc] initFromXMLString:xmlString
+    RXMLElement     *rootElement     = [[RXMLElement alloc] initFromXMLString:xmlString
                                                              encoding:NSISOLatin1StringEncoding];
-    RXMLElement     *channel     = [rootElement child:@"channel"];
-    NSArray         *items       = [channel children:@"item"];
-    NSMutableArray  *activities  = [[NSMutableArray alloc] initWithCapacity:items.count];
-    NSDateFormatter *formatter   = [[NSDateFormatter alloc] init];
+    RXMLElement     *channel         = [rootElement child:@"channel"];
+    NSArray         *items           = [channel children:@"item"];
+    NSMutableArray  *activities      = [[NSMutableArray alloc] initWithCapacity:items.count];
+    NSDateFormatter *formatter       = [[NSDateFormatter alloc] init];
+    NSLocale        *formatterLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
+    
+    [formatter setLocale:formatterLocale];
     [formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss Z"];
     
     for (RXMLElement *XMLActivity in items) {
@@ -227,7 +230,7 @@
                                                                url:nil
                                                   shortDescription:shortDescription.text
                                                        description:description.text
-                                                     publishedDate:[formatter dateFromString:[NSString stringWithFormat:@"%@", pubdate.text]]
+                                                     publishedDate:[formatter dateFromString:pubdate.text]
                                                          colorCode:color.text
                                                           priority:priority.text.intValue
                                                       basePriority:0
@@ -238,12 +241,11 @@
                                                          isVisible:YES
                                                                tag:tag.text];
         
-        NSLog(@"%@", [newActivity publishedDateString]);
+        NSLog(@"%@", [newActivity publishedDate]);
+        
         [activities addObject:newActivity];
     }
-    
     return activities;
-    
 }
 
 /*-------------------------------------------------
