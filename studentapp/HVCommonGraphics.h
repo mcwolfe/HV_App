@@ -10,8 +10,7 @@
 
 @interface HVCommonGraphics : NSObject
 
-void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor,
-                        CGColorRef  endColor);
+void drawLinearGradient(CGContextRef context, CGRect rect, UIColor *startColor, UIColor *endColor);
 
 CGRect rectFor1PxStroke(CGRect rect);
 @end
