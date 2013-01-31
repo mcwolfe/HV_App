@@ -5,6 +5,7 @@
 //  Created by Rickard Fjeldseth on 2013-01-06.
 //  Copyright (c) 2013 Högskolan Väst. All rights reserved.
 //
+// En kommentar
 
 #import <UIKit/UIKit.h>
 
