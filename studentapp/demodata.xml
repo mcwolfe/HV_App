@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <atom:link href="https://mittkonto.hv.se/app_rss.php" rel="self" type="application/rss+xml"/>
+        <language>sv-se</language>
+        <title>Din dag</title>
+        <link>http://minsida.hv.se</link>
+        <description>Här får du nyheter, kursinformation, schema och annat som är aktuellt för den närmaste tiden i samband med dina studier.</description>
+        <pubDate>Thu, 17 Jan 2013 18:14:57 +0100</pubDate>
+        <ttl>60</ttl>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2857</guid>
+			<title>Testdata</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>registrering på kurs</shortDescription>
+			<description>registrering på kurs </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_ladokreg_</color>
+			<priority>30</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>ladokreg</category>
+			<displayStatus></displayStatus>
+			<tag>ladok</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2858</guid>
+			<title>anmälan tenta</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>anmälan tenta</shortDescription>
+			<description>anmälan tenta </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_ladoktenta_</color>
+			<priority>29</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>ladoktenta</category>
+			<displayStatus></displayStatus>
+			<tag>ladok</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2859</guid>
+			<title>nyhet 1</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>nyhetstext 1</shortDescription>
+			<description>nyhetstext 1 Här kommer själva artikeltexten.</description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>1_disco_</color>
+			<priority>20</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>1</source>
+			<category>disco</category>
+			<displayStatus></displayStatus>
+			<tag>disco</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2861</guid>
+			<title>nyhet 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>nyhetstext 3</shortDescription>
+			<description>nyhetstext 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco_</color>
+			<priority>14</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco</category>
+			<displayStatus></displayStatus>
+			<tag>disco</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2852</guid>
+			<title>Schema test 1</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 1</shortDescription>
+			<description>beskrivning 1 Text som beskriver vad föreläsningstillfället innehåller.</description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>1_disco-kronox_</color>
+			<priority>12</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>1</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2860</guid>
+			<title>nyhet 2</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>nyhetstext 2</shortDescription>
+			<description>nyhetstext 2 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>2_disco_</color>
+			<priority>12</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>2</source>
+			<category>disco</category>
+			<displayStatus></displayStatus>
+			<tag>disco</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2853</guid>
+			<title>Schema test 2</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 2</shortDescription>
+			<description>beskrivning 2 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>2_disco-kronox_</color>
+			<priority>11</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>2</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-2854</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        
+    </channel>
+</rss>
