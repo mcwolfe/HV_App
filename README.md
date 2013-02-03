@@ -1,4 +1,4 @@
-# [HV-App](https://github.com/AntonAderum/BoxSlider)
+# [HV-App](https://github.com/mcwolfe/HV_App)
 
 HV-appen är en prototyp av en iPhone-applikation utvecklad åt Högskolan Väst.
 Appen kommer att hjälpa studenter på Högskolan Väst att hålla koll på allt som händer i skolan.
