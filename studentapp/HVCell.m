@@ -72,6 +72,18 @@
     [self.contentView addSubview:titleLabel];
 }
 
+- (void)addDescriptionTextToSubview {
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:11];
+    CGRect textRect = CGRectMake(0, 10, 210, 50);
+    
+    descriptionText = [[UITextView alloc] initWithFrame:textRect];
+    descriptionText.backgroundColor = [UIColor clearColor];
+    descriptionText.font = font;
+    descriptionText.editable = NO;
+    descriptionText.userInteractionEnabled = NO;
+    [self.contentView addSubview:descriptionText];
+}
+
 - (void)addDateLabelToSubview {
     
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:11];
@@ -102,16 +114,6 @@
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
     [super setHighlighted:highlighted animated:animated];
-}
-
-- (void)addDescriptionTextToSubview {
-    UIFont *font = [UIFont fontWithName:@"Helvetica" size:11];
-    CGRect textRect = CGRectMake(0, 10, 210, 50);
-    
-    descriptionText = [[UITextView alloc] initWithFrame:textRect];
-    descriptionText.backgroundColor = [UIColor clearColor];
-    descriptionText.font = font;
-    [self.contentView addSubview:descriptionText];
 }
 
 @end
