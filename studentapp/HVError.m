@@ -32,11 +32,10 @@
     return self;
 }
 
-+ (HVError *)errorFromNSError:(NSError *)error
-{
++ (HVError *)errorFromNSError:(NSError *)error {
     return [[HVError alloc] initWithDescription:[error localizedDescription]
                                            code:[error code]
-                                     errorTitle:[error localizedFailureReason]];
+                                     errorTitle:[NSString stringWithFormat:@"Felkod: %d", [error code]]];
 }
 
 + (HVError *)loginFailedWrongCredentials

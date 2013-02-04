@@ -91,7 +91,19 @@
  * Return: void.
  ------------------------------------------------*/
 - (void)addActivity:(HVActivity *)activity {
+    
+    for (HVActivity *a in self.allActivites) {
+        if([a.guid isEqualToString:activity.guid]) {
+            return;
+        }
+    }
     [allActivities addObject:activity];
+}
+
+- (void)addActivitiesFromArray:(NSArray *)activites {
+    for (HVActivity *a in activites) {
+        [self addActivity:a];
+    }
 }
 
 /*-------------------------------------------------
@@ -114,8 +126,7 @@
     }
     NSArray *XMLActivities = [self generateActivitiesFromXMLWithString:testXMLData];
     
-    [allActivities removeAllObjects];
-    [allActivities addObjectsFromArray:XMLActivities];
+    [self addActivitiesFromArray:XMLActivities];
     
 }
 
@@ -186,8 +197,7 @@
     
     dataReceived = nil;
     
-    [allActivities removeAllObjects];
-    [allActivities addObjectsFromArray:XMLActivities];
+    [self addActivitiesFromArray:XMLActivities];
     
     [[self webConnectionDelegate] ActivityStore:self
                              dataIsReadyForView:nil];

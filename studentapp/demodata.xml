@@ -152,6 +152,150 @@
 			<displayStatus></displayStatus>
 			<tag>schema</tag>
         </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9000</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9001</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9002</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9003</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9004</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9005</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9006</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
+        <item>
+			<guid isPermaLink="false">minsida.hv.se-9007</guid>
+			<title>Schema test 3</title>
+			<link>http://www.hv.se</link>
+			<shortDescription>beskrivning 3</shortDescription>
+			<description>beskrivning 3 </description>
+			<pubDate>Thu, 17 Jan 2013 18:14:18 +0100</pubDate>
+			<color>3_disco-kronox_</color>
+			<priority>6</priority>
+			<basePriority></basePriority>
+			<priorityChange></priorityChange>
+			<eventStartTS></eventStartTS>
+			<eventEndTS></eventEndTS>
+			<source>3</source>
+			<category>disco-kronox</category>
+			<displayStatus></displayStatus>
+			<tag>schema</tag>
+        </item>
         
     </channel>
 </rss>

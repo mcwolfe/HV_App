@@ -13,6 +13,7 @@
 @property (nonatomic) int               basePriority;
 @property (nonatomic) int               priority;
 @property (nonatomic) BOOL              isVisible;
+@property (nonatomic) BOOL              hasBeenRead;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *activityDescription;
 @property (nonatomic, retain) NSString *activityShortDescription;

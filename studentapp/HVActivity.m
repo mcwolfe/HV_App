@@ -16,6 +16,7 @@
 @synthesize basePriority;
 @synthesize priority;
 @synthesize isVisible;
+@synthesize hasBeenRead;
 @synthesize eventDateStart;
 @synthesize eventDateEnd;
 @synthesize publishedDate;

@@ -164,15 +164,19 @@
         cell = [[HVCell alloc] initWithStyle:UITableViewCellStyleDefault
                              reuseIdentifier:CellIdentifier];
     }
-    
-    //Ställ in egenskaper hos cellen innan den returneras.
 
-    [cell setSideColor:activity.color];
+    
+    [cell markAsRead:activity.hasBeenRead];
+    
     
     cell.descriptionText.text = activity.activityShortDescription;
-    cell.tagLabel.text = activity.tag;
-    cell.dateLabel.text = activity.publishedDateString;
-    cell.titleLabel.text = activity.title;
+    cell.tagLabel.text        = activity.tag;
+    cell.dateLabel.text       = activity.publishedDateString;
+    cell.titleLabel.text      = activity.title;
+    
+    [cell setSideColor:activity.color];
+    
+    
     return cell;
 }
 
@@ -185,6 +189,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     HVActivity *activity = [[[HVActivityStore sharedInstance] allActivites] objectAtIndex:[indexPath row]];
+    activity.hasBeenRead = YES;
+    
     HVActivityDetailViewController *detailView = [[HVActivityDetailViewController alloc] init];
     [detailView setActivity:activity];
     

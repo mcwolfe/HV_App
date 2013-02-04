@@ -18,8 +18,10 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    
+    NSLog(@"Skapar en HVCell!");
     if (self) {
+        defaultLabelColor = [UIColor blackColor];
+        defaultDateLabelColor = [UIColor lightGrayColor];
         self.backgroundColor = [UIColor clearColor];
         [self addTagLabelToSubview];
         [self addDateLabelToSubview];
@@ -32,6 +34,15 @@
     }
     return self;
 }
+
+- (UIColor *)defaultLabelColor {
+    return defaultLabelColor;
+}
+
+- (UIColor *)defaultDateLabelColor {
+    return defaultDateLabelColor;
+}
+
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
 }
@@ -69,6 +80,7 @@
     titleLabel = [[UILabel alloc] initWithFrame:tagRect];
     titleLabel.font = font;
     titleLabel.backgroundColor = [UIColor clearColor];
+    
     [self.contentView addSubview:titleLabel];
 }
 
@@ -81,6 +93,7 @@
     descriptionText.font = font;
     descriptionText.editable = NO;
     descriptionText.userInteractionEnabled = NO;
+    
     [self.contentView addSubview:descriptionText];
 }
 
@@ -93,6 +106,7 @@
     dateLabel.textAlignment = NSTextAlignmentRight;
     dateLabel.textColor = [UIColor lightGrayColor];
     dateLabel.backgroundColor = [UIColor clearColor];
+    
     [self.contentView addSubview:dateLabel];
 }
 
@@ -105,6 +119,23 @@
     
     [self.backgroundView setNeedsDisplay];
     [self.selectedBackgroundView setNeedsDisplay];
+}
+
+- (void)markAsRead:(BOOL)hasBeenRead {
+    if (hasBeenRead) {
+        self.descriptionText.textColor = [UIColor lightGrayColor];
+        self.titleLabel.textColor      = [UIColor lightGrayColor];
+        self.tagLabel.textColor        = [UIColor lightGrayColor];
+        self.dateLabel.textColor       = [UIColor lightGrayColor];
+    } else {
+        self.descriptionText.textColor = [self defaultLabelColor];
+        self.titleLabel.textColor      = [self defaultLabelColor];
+        self.tagLabel.textColor        = [self defaultLabelColor];
+        self.dateLabel.textColor       = [self defaultDateLabelColor];
+    }
+
+    
+    [self setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

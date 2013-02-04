@@ -10,6 +10,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HVCell : UITableViewCell
+{
+    UIColor *defaultLabelColor;
+    UIColor *defaultDateLabelColor;
+}
 
 @property (retain, nonatomic) UITextView *descriptionText;
 @property (retain, nonatomic) UILabel    *titleLabel;
@@ -17,4 +21,7 @@
 @property (retain, nonatomic) UILabel    *dateLabel;
 
 - (void)setSideColor:(UIColor *)color;
+- (void)markAsRead:(BOOL)hasBeenRead;
+- (UIColor *)defaultLabelColor;
+- (UIColor *)defaultDateLabelColor;
 @end
