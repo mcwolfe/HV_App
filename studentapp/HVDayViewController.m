@@ -16,6 +16,7 @@
 #import "HVError.h"
 #import "MBProgressHUD.h"
 #import "HVCellBackground.h"
+#import "HVSettingsViewController.h"
 
 @interface HVDayViewController ()
 
@@ -27,18 +28,19 @@
     self = [super initWithStyle:style];
     
     if (self) {
+
         [[self navigationItem] setTitle:@"Min dag på HV"];
         logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logga ut"
                                                         style:UIBarButtonItemStylePlain
                                                         target:self
                                                         action:@selector(logout:)];
         
-        reloadDataButton = [[UIBarButtonItem alloc] initWithTitle:@"Ladda om"
+        menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Meny"
                                                             style:UIBarButtonSystemItemAction
                                                            target:self
                                                            action:@selector(reloadData:)];
-        [[self navigationItem] setRightBarButtonItem:logOutButton];
-        [[self navigationItem] setLeftBarButtonItem:reloadDataButton];
+        [[self navigationItem] setLeftBarButtonItem:logOutButton];
+        [[self navigationItem] setRightBarButtonItem:menuButton];
     }
     
     return self;
@@ -55,9 +57,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-}
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     switch ([HVUserModel sharedInstance].loginStatus) {
         case HVLoggedIn:
@@ -73,6 +72,11 @@
             [[self tableView] reloadData];
             break;
     }
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,6 +100,7 @@
         animated = YES;
     }
     
+    
     [[HVUserModel sharedInstance] setLoginStatus:HVLoggedOut];
     
     HVLoginViewController *loginView = [[HVLoginViewController alloc] init];
@@ -106,7 +111,10 @@
 }
 
 - (void)reloadData:(id)sender {
-    [[self tableView] reloadData];
+    
+    HVSettingsViewController *svc = [[HVSettingsViewController alloc] init];
+    [[self navigationController] pushViewController:svc animated:YES];
+    //[[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source

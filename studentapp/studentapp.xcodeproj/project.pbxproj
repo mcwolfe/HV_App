@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26384B2416CBF18800ECAF45 /* HVNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26384B2316CBF18800ECAF45 /* HVNewsViewController.m */; };
 		268AB88816A70B220079304E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 268AB88716A70B220079304E /* RXMLElement.m */; };
 		268AB88A16A70B930079304E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268AB88916A70B930079304E /* libz.dylib */; };
 		268AB88C16A70BA20079304E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268AB88B16A70BA20079304E /* libxml2.dylib */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26384B2216CBF18800ECAF45 /* HVNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNewsViewController.h; sourceTree = "<group>"; };
+		26384B2316CBF18800ECAF45 /* HVNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNewsViewController.m; sourceTree = "<group>"; };
 		268AB88616A70B220079304E /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		268AB88716A70B220079304E /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		268AB88916A70B930079304E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -206,6 +209,8 @@
 				268C7762169C36C900AC5C65 /* HVActivityDetailViewController.h */,
 				268C7763169C36C900AC5C65 /* HVActivityDetailViewController.m */,
 				268C7764169C36CA00AC5C65 /* HVActivityDetailViewController.xib */,
+				26384B2216CBF18800ECAF45 /* HVNewsViewController.h */,
+				26384B2316CBF18800ECAF45 /* HVNewsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				26D9A0B116ADD21200DDB013 /* MBProgressHUD.m in Sources */,
 				26DB93EE16B6A8EB0017FCEA /* HVCellBackground.m in Sources */,
 				26DB93F116B6AE0C0017FCEA /* HVCommonGraphics.m in Sources */,
+				26384B2416CBF18800ECAF45 /* HVNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

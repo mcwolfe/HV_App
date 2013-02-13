@@ -15,7 +15,7 @@
 @interface HVDayViewController : UITableViewController <HVLoginServiceDelegate, HVActivityStoreDelegate>
 {
     UIBarButtonItem *logOutButton;
-    UIBarButtonItem *reloadDataButton;
+    UIBarButtonItem *menuButton;
 }
 
 - (void)showLoading;

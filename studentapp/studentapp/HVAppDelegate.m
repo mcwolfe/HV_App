@@ -9,6 +9,7 @@
 #import "HVAppDelegate.h"
 #import "HVDayViewController.h"
 #import "HVSettingsViewController.h"
+#import "HVNewsViewController.h"
 
 @implementation HVAppDelegate
 
@@ -17,12 +18,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    HVDayViewController *dayViewController = [[HVDayViewController alloc] init];
     
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] init];
+    HVDayViewController *dayViewController = [[HVDayViewController alloc] init];
+    HVSettingsViewController *settingsViewController = [[HVSettingsViewController alloc] init];
+    HVNewsViewController *news = [[HVNewsViewController alloc] init];
     
     [navController addChildViewController:dayViewController];
-    [[self window] setRootViewController:navController];
+    
+    NSArray *controllers = [NSArray arrayWithObjects:navController, settingsViewController, news, nil];
+    [tabBarController setViewControllers:controllers];
+    
+    
+    [[self window] setRootViewController:tabBarController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

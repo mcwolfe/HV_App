@@ -125,7 +125,7 @@
         @throw @"XML Testdata";
     }
     NSArray *XMLActivities = [self generateActivitiesFromXMLWithString:testXMLData];
-    
+    [[self allActivites] removeAllObjects];
     [self addActivitiesFromArray:XMLActivities];
     
 }
