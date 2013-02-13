@@ -20,14 +20,16 @@
     
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] init];
+    UINavigationController *DayViewNavController = [[UINavigationController alloc] init];
+    UINavigationController *NewsViewNavController = [[UINavigationController alloc] init];
     HVDayViewController *dayViewController = [[HVDayViewController alloc] init];
     HVSettingsViewController *settingsViewController = [[HVSettingsViewController alloc] init];
     HVNewsViewController *news = [[HVNewsViewController alloc] init];
     
-    [navController addChildViewController:dayViewController];
+    [DayViewNavController addChildViewController:dayViewController];
+    [NewsViewNavController addChildViewController:news];
     
-    NSArray *controllers = [NSArray arrayWithObjects:navController, settingsViewController, news, nil];
+    NSArray *controllers = [NSArray arrayWithObjects:DayViewNavController, settingsViewController, NewsViewNavController, nil];
     [tabBarController setViewControllers:controllers];
     
     

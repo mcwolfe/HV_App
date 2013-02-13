@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E9FBD016CBF95400F07F58 /* HVNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */; };
 		26384B2416CBF18800ECAF45 /* HVNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26384B2316CBF18800ECAF45 /* HVNewsViewController.m */; };
 		268AB88816A70B220079304E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 268AB88716A70B220079304E /* RXMLElement.m */; };
 		268AB88A16A70B930079304E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 268AB88916A70B930079304E /* libz.dylib */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HVNewsViewController.xib; sourceTree = "<group>"; };
 		26384B2216CBF18800ECAF45 /* HVNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNewsViewController.h; sourceTree = "<group>"; };
 		26384B2316CBF18800ECAF45 /* HVNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNewsViewController.m; sourceTree = "<group>"; };
 		268AB88616A70B220079304E /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				268C7764169C36CA00AC5C65 /* HVActivityDetailViewController.xib */,
 				26384B2216CBF18800ECAF45 /* HVNewsViewController.h */,
 				26384B2316CBF18800ECAF45 /* HVNewsViewController.m */,
+				14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				268C7766169C36CA00AC5C65 /* HVActivityDetailViewController.xib in Resources */,
 				269B366A16A88D8200326045 /* demodata.xml in Resources */,
 				26DB93CC16B58A640017FCEA /* GPS@x2.png in Resources */,
+				14E9FBD016CBF95400F07F58 /* HVNewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
