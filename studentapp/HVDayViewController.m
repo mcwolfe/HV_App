@@ -187,7 +187,7 @@
     
     [cell setSideColor:activity.color];
     
-    
+    //En liten ändring
     return cell;
 }
 
