@@ -33,13 +33,12 @@
         logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logga ut"
                                                         style:UIBarButtonItemStylePlain
                                                         target:self
-                                                       action:@selector(logout:)];
+                                                        action:@selector(logout:)];
         
-        menuButton = [[UIBarButtonItem alloc] initWithTitle:@""
-                                                            style:UIBarButtonItemStyleBordered
+        menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Meny"
+                                                            style:UIBarButtonSystemItemAction
                                                            target:self
-                                                           action:@selector(showSettings)];
-        
+                                                           action:@selector(reloadData:)];
         [[self navigationItem] setLeftBarButtonItem:logOutButton];
         [[self navigationItem] setRightBarButtonItem:menuButton];
     }
@@ -111,13 +110,11 @@
                      completion:nil];
 }
 
-- (void)showSettings {
+- (void)reloadData:(id)sender {
+    
     HVSettingsViewController *svc = [[HVSettingsViewController alloc] init];
     [[self navigationController] pushViewController:svc animated:YES];
-}
-
-- (void)reloadData:(id)sender {
-    [[self tableView] reloadData];
+    //[[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
@@ -187,7 +184,7 @@
     
     [cell setSideColor:activity.color];
     
-    
+    //Har gjort en liten ändring
     return cell;
 }
 
