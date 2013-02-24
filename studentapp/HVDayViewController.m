@@ -33,12 +33,13 @@
         logOutButton = [[UIBarButtonItem alloc] initWithTitle:@"Logga ut"
                                                         style:UIBarButtonItemStylePlain
                                                         target:self
-                                                        action:@selector(logout:)];
+                                                       action:@selector(logout:)];
         
-        menuButton = [[UIBarButtonItem alloc] initWithTitle:@"Meny"
-                                                            style:UIBarButtonSystemItemAction
+        menuButton = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                            style:UIBarButtonItemStyleBordered
                                                            target:self
-                                                           action:@selector(reloadData:)];
+                                                           action:@selector(showSettings)];
+        
         [[self navigationItem] setLeftBarButtonItem:logOutButton];
         [[self navigationItem] setRightBarButtonItem:menuButton];
     }
@@ -110,11 +111,13 @@
                      completion:nil];
 }
 
-- (void)reloadData:(id)sender {
-    
+- (void)showSettings {
     HVSettingsViewController *svc = [[HVSettingsViewController alloc] init];
     [[self navigationController] pushViewController:svc animated:YES];
-    //[[self tableView] reloadData];
+}
+
+- (void)reloadData:(id)sender {
+    [[self tableView] reloadData];
 }
 
 #pragma mark - Table view data source
