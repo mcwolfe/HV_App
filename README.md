@@ -11,4 +11,4 @@ Appen kommer att hjälpa studenter på Högskolan Väst att hålla koll på allt
 * [Anton Aderum](https://github.com/AntonAderum)
 * [Richard Fjeldsteth](https://github.com/rickardfjeldseth)
 * [Ulf Andersson](https://github.com/mcwolfe)
-* [Robert Andersson Dahlberg](https://github.com)
+* [Robert Andersson Dahlberg](https://github.com/robertadahlberg)
