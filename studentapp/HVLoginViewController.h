@@ -10,14 +10,15 @@
 #import "HVLoginService.h"
 @class MBProgressHUD;
 
-@interface HVLoginViewController : UIViewController <UITextFieldDelegate, HVLoginServiceDelegate>
+@interface HVLoginViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, HVLoginServiceDelegate>
 {  
-    __weak IBOutlet UIButton    *loginButton;
-    __weak IBOutlet UITextField *usernameField;
-    __weak IBOutlet UITextField *passwordField;
+    __weak IBOutlet UIButton *loginButton;
+    UITextField              *usernameField;
+    UITextField              *passwordField;
+    UITableView              *loginTable;
     
-    MBProgressHUD               *progressHUD;
-    HVLoginService              *loginService;
+    MBProgressHUD            *progressHUD;
+    HVLoginService           *loginService;
 }
 
 - (IBAction)viewTapped:(id)sender;
