@@ -90,6 +90,8 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
+    
+    
     [self.delegate loginService:self didFinishLoginWithError:[HVError errorFromNSError:error]];
 }
 

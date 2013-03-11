@@ -33,10 +33,16 @@
 }
 
 + (HVError *)errorFromNSError:(NSError *)error {
-    return [[HVError alloc] initWithDescription:[error localizedDescription]
-                                           code:[error code]
-                                     errorTitle:[NSString stringWithFormat:@"Felkod: %d", [error code]]];
+    switch (error.code) {
+        case -1001: return [HVError loginFailedRequestTimedOut];
+            
+        default: return [[HVError alloc] initWithDescription:[error localizedDescription]
+                                                       code:[error code]
+                                                 errorTitle:[NSString stringWithFormat:@"Felkod: %d", [error code]]];
+    }
 }
+
+#pragma mark Static HVErrors
 
 + (HVError *)loginFailedWrongCredentials
 {
