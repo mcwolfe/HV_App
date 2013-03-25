@@ -17,6 +17,9 @@
 #import "MBProgressHUD.h"
 #import "HVCellBackground.h"
 #import "HVSettingsViewController.h"
+#import "HVNews.h"
+#import "HVNewsStore.h"
+#import "HVNewsViewController.h"
 
 @interface HVDayViewController ()
 

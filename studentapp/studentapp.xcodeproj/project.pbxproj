@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1458DF5B16FF2843003EC637 /* HVNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1458DF5A16FF2843003EC637 /* HVNews.m */; };
+		1458DF5F16FF2BD2003EC637 /* HVNewsStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1458DF5E16FF2BD2003EC637 /* HVNewsStore.m */; };
+		1458DF6316FF5F2F003EC637 /* HVNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1458DF6116FF5F2F003EC637 /* HVNewsDetailViewController.m */; };
+		1458DF6416FF5F2F003EC637 /* HVNewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1458DF6216FF5F2F003EC637 /* HVNewsDetailViewController.xib */; };
 		14E9FBD016CBF95400F07F58 /* HVNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */; };
 		26384B2416CBF18800ECAF45 /* HVNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26384B2316CBF18800ECAF45 /* HVNewsViewController.m */; };
 		268AB88816A70B220079304E /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 268AB88716A70B220079304E /* RXMLElement.m */; };
@@ -48,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1458DF5916FF2843003EC637 /* HVNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNews.h; sourceTree = "<group>"; };
+		1458DF5A16FF2843003EC637 /* HVNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNews.m; sourceTree = "<group>"; };
+		1458DF5D16FF2BD2003EC637 /* HVNewsStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNewsStore.h; sourceTree = "<group>"; };
+		1458DF5E16FF2BD2003EC637 /* HVNewsStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNewsStore.m; sourceTree = "<group>"; };
+		1458DF6016FF5F2F003EC637 /* HVNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNewsDetailViewController.h; sourceTree = "<group>"; };
+		1458DF6116FF5F2F003EC637 /* HVNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNewsDetailViewController.m; sourceTree = "<group>"; };
+		1458DF6216FF5F2F003EC637 /* HVNewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HVNewsDetailViewController.xib; sourceTree = "<group>"; };
 		14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HVNewsViewController.xib; sourceTree = "<group>"; };
 		26384B2216CBF18800ECAF45 /* HVNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVNewsViewController.h; sourceTree = "<group>"; };
 		26384B2316CBF18800ECAF45 /* HVNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVNewsViewController.m; sourceTree = "<group>"; };
@@ -214,6 +225,9 @@
 				26384B2216CBF18800ECAF45 /* HVNewsViewController.h */,
 				26384B2316CBF18800ECAF45 /* HVNewsViewController.m */,
 				14E9FBCF16CBF95400F07F58 /* HVNewsViewController.xib */,
+				1458DF6016FF5F2F003EC637 /* HVNewsDetailViewController.h */,
+				1458DF6116FF5F2F003EC637 /* HVNewsDetailViewController.m */,
+				1458DF6216FF5F2F003EC637 /* HVNewsDetailViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +239,8 @@
 				268C772A1697B5AB00AC5C65 /* HVUserModel.m */,
 				268C7742169A00CB00AC5C65 /* HVActivity.h */,
 				268C7743169A00CB00AC5C65 /* HVActivity.m */,
+				1458DF5916FF2843003EC637 /* HVNews.h */,
+				1458DF5A16FF2843003EC637 /* HVNews.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -234,6 +250,8 @@
 			children = (
 				268C773F169A00BF00AC5C65 /* HVActivityStore.h */,
 				268C7740169A00BF00AC5C65 /* HVActivityStore.m */,
+				1458DF5D16FF2BD2003EC637 /* HVNewsStore.h */,
+				1458DF5E16FF2BD2003EC637 /* HVNewsStore.m */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 				269B366A16A88D8200326045 /* demodata.xml in Resources */,
 				26DB93CC16B58A640017FCEA /* GPS@x2.png in Resources */,
 				14E9FBD016CBF95400F07F58 /* HVNewsViewController.xib in Resources */,
+				1458DF6416FF5F2F003EC637 /* HVNewsDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +398,9 @@
 				26DB93EE16B6A8EB0017FCEA /* HVCellBackground.m in Sources */,
 				26DB93F116B6AE0C0017FCEA /* HVCommonGraphics.m in Sources */,
 				26384B2416CBF18800ECAF45 /* HVNewsViewController.m in Sources */,
+				1458DF5B16FF2843003EC637 /* HVNews.m in Sources */,
+				1458DF5F16FF2BD2003EC637 /* HVNewsStore.m in Sources */,
+				1458DF6316FF5F2F003EC637 /* HVNewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

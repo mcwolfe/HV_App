@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HVNewsStore.h"
 
 @interface HVNewsViewController : UITableViewController
 {
-    NSArray *items;
 }
+
+- (void)showLoading;
+- (void)hideLoading;
+
+@property (nonatomic, retain) HVNews *newsItem;
+
 @end

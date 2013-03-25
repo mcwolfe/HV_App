@@ -6,10 +6,23 @@
 //  Copyright (c) 2013 Högskolan Väst. All rights reserved.
 //
 
+#import "HVDayViewController.h"
+#import "HVLoginViewController.h"
+#import "HVActivityDetailViewController.h"
+#import "HVUserModel.h"
+#import "HVActivityStore.h"
+#import "HVActivity.h"
+#import "HVCell.h"
+#import "HVError.h"
+#import "MBProgressHUD.h"
+#import "HVCellBackground.h"
+#import "HVSettingsViewController.h"
+#import "HVNews.h"
+#import "HVNewsStore.h"
 #import "HVNewsViewController.h"
+#import "HVNewsDetailViewController.h"
 
 @interface HVNewsViewController ()
-
 @end
 
 @implementation HVNewsViewController
@@ -17,11 +30,22 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        items = [NSArray arrayWithObjects:@"Item 1", @"item 2", @"Item 3", nil];
-    }
+    [[self navigationItem] setTitle:@"Nyheter på HV"];
+    
+    
+    
     return self;
+}
+
+-(id)init{
+    return [self initWithStyle:UITableViewStylePlain];
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[HVNewsStore sharedInstance] setWebConnectionDelegate:(id)self];
+    [[HVNewsStore sharedInstance] addAllNewsFromWebService];
+    [self showLoading];
 }
 
 - (void)viewDidLoad
@@ -41,36 +65,63 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    
     // Return the number of rows in the section.
-    return [items count];
+    return [[[HVNewsStore sharedInstance] allNews] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *value = [items objectAtIndex:indexPath.row];
+    int index = [indexPath row];
+
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    
+    HVNews *newsItem =[[[HVNewsStore sharedInstance] allNews] objectAtIndex:index];
+    
+    HVCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // Configure the cell...
+    
+    if(cell==nil){
+        cell = [[HVCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = value;
-    // Configure the cell...
+    [cell markAsRead:newsItem.hasBeenRead];
+    cell.descriptionText.text = newsItem.description;
+    cell.titleLabel.text = newsItem.title;
+    cell.dateLabel.text = newsItem.publishedDateString;
     
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 75;
+}
+
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HVNews *newsItem = [[[HVNewsStore sharedInstance] allNews] objectAtIndex:[indexPath row]];
+    
+    newsItem.hasBeenRead = YES;
+    HVNewsViewController *detailView = [[HVNewsViewController alloc] init];
+    [detailView setNewsItem:newsItem];
+    [[self navigationController] pushViewController:detailView animated:YES];
+}
+   
 
 /*
 // Override to support conditional editing of the table view.
@@ -113,15 +164,29 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
+-(void)NewsStore:(HVNewsStore *)store dataIsReadyForView:(HVError *) error{
+    [self hideLoading];
+    
+    if(error){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error errorTitle] message:[error errorDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    [self reloadData:nil];
+    
+}
+
+- (void)showLoading {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [hud setLabelText:@"Förbereder din dag"];
+}
+
+- (void)hideLoading {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+- (void)reloadData:(id)sender {
+    [[self tableView] reloadData];
 }
 
 @end
